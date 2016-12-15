@@ -1,14 +1,9 @@
-package service
+package service.content
 
-import java.time.LocalDate
 import java.util.Date
 
 import domain.content.RawContent
 import org.scalatest.{FeatureSpec, GivenWhenThen}
-import service.content.RawContentService
-
-import scala.concurrent.{Await, Future}
-import scala.util.{Failure, Success}
 
 /**
   * Created by user42 on 2016/09/05.

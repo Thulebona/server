@@ -1,12 +1,9 @@
-package service
+package service.content
 
 import java.util.Date
 
 import domain.content.{Media, RawContent}
 import org.scalatest.{FeatureSpec, GivenWhenThen}
-import service.content.{MediaService, RawContentService}
-
-import scala.util.{Failure, Success}
 
 /**
   * Created by user42 on 2016/09/06.

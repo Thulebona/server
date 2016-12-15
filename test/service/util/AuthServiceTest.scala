@@ -1,7 +1,6 @@
-package service
+package service.util
 
-import org.scalatest.{GivenWhenThen, FeatureSpec}
-import service.util.AuthService
+import org.scalatest.{FeatureSpec, GivenWhenThen}
 
 /**
  * Created by hashcode on 2015/06/15.

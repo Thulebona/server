@@ -1,7 +1,7 @@
 package controllers.organisation
 
 import com.websudos.phantom.dsl.ResultSet
-import domain.organisation.{Organisation, OrganisationModel}
+import domain.organisation.{Organisation}
 import play.api.libs.json.Json
 import play.api.mvc.{Action, Controller}
 import service.organisation.OrganisationService
@@ -16,14 +16,19 @@ class OrganisationController extends Controller {
 
   implicit val orgWrites = Json.writes[Organisation]
 
-  def createOrUpdate = Action.async(parse.json) {
+  def createOrUpdate(organisation: String) = Action.async(parse.json) {
     request =>
       val input = request.body
-//      val o = (input \ "organisation").as[String]
-//      val j = Json.parse(o)
+      val o = (input \ "organisation").as[String]
+      val j = Json.parse(o)
 
-      val entity = Json.fromJson[Organisation](input).get
+
+//      val entity = Json.fromJson[Organisation](input).get
+      val entity = Json.fromJson[Organisation](j).get
       val results = OrganisationService.saveOrUpdate(entity)
+//      results.map(result =>
+//        Ok(Json.toJson(entity)))
+
       results.map(result =>
         Ok(Json.toJson(entity)))
   }

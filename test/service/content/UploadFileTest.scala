@@ -1,4 +1,4 @@
-package service
+package service.content
 
 import java.util.Date
 

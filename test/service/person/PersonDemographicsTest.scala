@@ -1,16 +1,11 @@
-package service
+package service.person
 
 import java.util.Date
 
-import domain.demographics.{Gender, Language, Race}
-import domain.location.{AddressType, ContactType}
+import domain.demographics.{Gender, Race}
 import domain.person._
 import org.scalatest.{FeatureSpec, GivenWhenThen}
-import service.demographics.{GenderService, LanguageService, RaceService}
-import service.location.{AddressTypeService, ContactTypeService}
-import service.person._
-
-import scala.util.{Failure, Success}
+import service.demographics.{GenderService, RaceService}
 
 /**
   * Created by user42 on 2016/09/09.
